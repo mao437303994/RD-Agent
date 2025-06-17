@@ -87,8 +87,12 @@ class LiteLLMAPIBackend(APIBackend):
         """
         Call the chat completion function
         """
-        if json_mode and supports_response_schema(model=LITELLM_SETTINGS.chat_model):
-            kwargs["response_format"] = {"type": "json_object"}
+        if json_mode:
+            if model.startswith("deepseek"):
+                kwargs["response_format"] = {"type": "json_object"}
+                
+            elif supports_response_schema(model=LITELLM_SETTINGS.chat_model):
+                kwargs["response_format"] = {"type": "json_object"}
 
         logger.info(self._build_log_messages(messages), tag="llm_messages")
         # Call LiteLLM completion
