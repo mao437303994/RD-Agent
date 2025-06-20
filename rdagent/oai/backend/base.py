@@ -465,9 +465,6 @@ class APIBackend(ABC):
 
         if json_mode:
             try:
-                all_response = all_response.replace("True", "true")
-                all_response = all_response.replace("False", "false")
-                all_response = all_response.replace("None", "null")
                 json.loads(all_response)
             except json.decoder.JSONDecodeError:
                 match = re.search(r"```json(.*)```", all_response, re.DOTALL)
