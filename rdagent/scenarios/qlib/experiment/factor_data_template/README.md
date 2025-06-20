@@ -16,9 +16,12 @@ NOTE: **key is always "data" for all hdf5 files **.
 # For different data, We have some basic knowledge for them
 
 ## Daily price and volume data
-$open: open price of the stock on that day.
-$close: close price of the stock on that day.
-$high: high price of the stock on that day.
-$low: low price of the stock on that day.
-$volume: volume of the stock on that day.
-$factor: factor value of the stock on that day.
+$open: Open price of the stock on that day.
+$close: Close price of the stock on that day.
+$high: High price of the stock on that day.
+$low: Low price of the stock on that day.
+$volume: Trading volume of the stock on that day.
+$oi: Open interest of the stock or contract on that day (mainly used for futures, represents the number of outstanding contracts).
+$month: The month corresponding to the trading date (e.g., 1 for January, 12 for December).
+$week: The week number of the year corresponding to the trading date.
+$quarter: The quarter of the year corresponding to the trading date (e.g., 1 for Q1, 4 for Q4).
