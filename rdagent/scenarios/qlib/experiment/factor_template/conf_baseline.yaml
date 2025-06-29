@@ -2,8 +2,8 @@ qlib_init:
   provider_uri: "~/.qlib/qlib_data/cn_data"
   region: cn
 
-market: &market csi300
-benchmark: &benchmark SH000300
+market: &market emindfi
+benchmark: &benchmark emfi
 
 task:
   model:
@@ -43,7 +43,7 @@ task:
               col_list: [ "RESI5", "WVMA5", "RSQR5", "KLEN", "RSQR10", "CORR5", "CORD5", "CORD10", "ROC60", "RESI10", "VSTD5", "RSQR60", "CORR60", "WVMA60", "STD5", "RSQR20", "CORD60", "CORD10", "CORR20", "KLOW" ]
           - class: ZScoreNorm
             kwargs:
-            fields_group: feature
+              fields_group: feature
           - class: Fillna
             kwargs:
               fields_group: feature
