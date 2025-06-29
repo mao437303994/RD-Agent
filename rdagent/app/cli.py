@@ -5,6 +5,9 @@ This will
 - make rdagent a nice entry and
 - autoamtically load dotenv
 """
+import os
+import sys
+sys.path.insert(1, os.getcwd())  # Ensure the current directory is in the path for module imports
 
 from dotenv import load_dotenv
 
@@ -66,3 +69,6 @@ def app():
             "server_ui": server_ui,
         }
     )
+
+if __name__ == "__main__":
+    fin_factor(loop_n=1)
