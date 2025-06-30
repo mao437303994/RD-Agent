@@ -10,9 +10,8 @@ task:
     class: LGBModel
     module_path: qlib.contrib.model.gbdt
     kwargs:
-      objective: binary
+      loss: binary
       metric: binary_logloss
-      verbosity: -1
       boosting_type: gbdt
       learning_rate: 0.0540573778890074
       num_leaves: 47
